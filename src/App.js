@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import wordData from './components/word';
+import Row from './components/row';
+import headshot_img from './assets/transparent_headshot.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div>
+      <h1>Liam's Wordle</h1>
+      <div className='profile-container'>
+      <img 
+                src={headshot_img} alt='headshot'
+            />
+      </div>
+      <Row wordData={wordData} />
     </div>
   );
 }
